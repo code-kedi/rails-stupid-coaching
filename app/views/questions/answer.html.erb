@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Answer Page - RailsStupidCoaching</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+  <div class="mb-4 border-start border-5">
+      <p class="px-3 py-1"><%= @question %></p>
+      <p class="px-3 py-1 fst-italic">- You</p>
+    </div>
+    <div class="bg-warning bg-opacity-10 border-start border-5">
+      <p class="px-3 py-1"><%= @answer %></p>
+      <p class="px-3 py-1 fst-italic">- Your Coach</p>
+    </div>
+    <div class="link-wrapper mt-4">
+    <%= link_to "Ask a new question", ask_path %>
+    </div>
+  </body>
+</html>

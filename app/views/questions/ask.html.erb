@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ask Page - RailsStupidCoaching</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+  <p class="fw-light">Ask your coach anything:</p>
+    <form class="row" action="/answer" method="get" data-turbo="false">
+    <div class="input-group mb-3">
+        <input class="form-control" type="text" name="question" value="<%= params[:question] %>">
+        <input class="btn btn-primary" id="button-addon2" type="submit" value="Ask!">
+    </div>
+    </form>
+  </div>
+  </body>
+</html>
